@@ -1,16 +1,18 @@
 let workLabel = document.getElementById("work");
 let breakLabel = document.getElementById("break");
 
-let workTime;
-do {
-  workTime = prompt("How long do you want to work? (in minutes)");
-} while (isNaN(workTime));
-let breakTime;
-do {
-  breakTime = prompt(
-    "What duration would you like for the resting period between sessions?"
-  );
-} while (isNaN(workTime));
+let workTime = prompt("How long do you want to work? (in minutes)");
+if (workTime === null || isNaN(workTime) || workTime === "") {
+  workTime = 25; // Default work time of 25 minutes
+}
+
+let breakTime = prompt(
+  "What duration would you like for the resting period between sessions?"
+);
+if (breakTime === null || isNaN(breakTime) || breakTime === "") {
+  breakTime = 5; // Default break time of 5 minutes
+}
+
 
 let seconds = "00";
 
