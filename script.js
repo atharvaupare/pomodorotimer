@@ -5,13 +5,14 @@ let workTime;
 do {
   workTime = prompt("How long do you want to work? (in minutes)");
 } while (isNaN(workTime));
-
 let breakTime;
 do {
   breakTime = prompt(
     "What duration would you like for the resting period between sessions?"
   );
 } while (isNaN(workTime));
+
+let seconds = "00";
 
 window.onload = () => {
   document.getElementById("minutes").innerHTML = workTime;
